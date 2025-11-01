@@ -1,12 +1,45 @@
-{
-    "welcome" : "Welcome to Calculator!",
-    "first_number" : "What's the first number?",
-    "second_number" : "What's the second number?",
-    "not_a_number" : "Hmm... that doesn't look like a valid number.",
-    "operation" : "What operation do you want to realize? \n1) Add 2)Substract 3) Multiply 4 Divide",
-    "chose1to4": "Must choose 1, 2, 3 or 4",
-    "result": "The result is:",
-    "another": "Would you like to do another operation? 1) Yes 2) No",
-    "chose1to2": "Must choose 1 or 2"
-
+{   "english": {
+        "welcome" : "Welcome to Calculator!",
+        "first_number" : "What's the first number?",
+        "second_number" : "What's the second number?",
+        "not_a_number" : "Hmm... that doesn't look like a valid number.",
+        "operation" : "What operation do you want to realize? \n1) Add 2)Substract 3) Multiply 4 Divide",
+        "chose1to4": "Must choose 1, 2, 3 or 4",
+        "result": "The result is:",
+        "another": "Would you like to do another operation? 1) Yes 2) No",
+        "chose1to2": "Must choose 1 or 2"
+    },
+    "spanish": {
+        "welcome": "¡Bienvenido a Calculadora!",
+        "first_number": "¿Cuál es el primer número?",
+        "second_number": "¿Cuál es el segundo número?",
+        "not_a_number": "Hmm... eso no parece un número válido.",
+        "operation": "¿Qué operación desea realizar? \n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
+        "chose1to4": "Debe elegir 1, 2, 3 o 4",
+        "result": "El resultado es:",
+        "another": "¿Le gustaría hacer otra operación? 1) Sí 2) No",
+        "chose1to2": "Debe elegir 1 o 2"
+    },
+    "french": {
+        "welcome" : "Bienvenue à la Calculatrice!",
+        "first_number" : "Quel est le premier nombre?",
+        "second_number" : "Quel est le deuxième nombre?",
+        "not_a_number" : "Hmm... ça ne ressemble pas à un nombre valide.",
+        "operation" : "Quelle opération voulez-vous effectuer? \n1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
+        "chose1to4": "Vous devez choisir 1, 2, 3 ou 4",
+        "result": "Le résultat est:",
+        "another": "Voulez-vous effectuer une autre opération? 1) Oui 2) Non",
+        "chose1to2": "Vous devez choisir 1 ou 2"
+    },
+    "italian": {
+        "welcome" : "Benvenuto al Calcolatore!",
+        "first_number" : "Qual è il primo numero?",
+        "second_number" : "Qual è il secondo numero?",
+        "not_a_number" : "Hmm... questo non sembra un numero valido.",
+        "operation" : "Quale operazione vuoi eseguire? \n1) Addizionare 2) Sottrarre 3) Moltiplicare 4) Dividere",
+        "chose1to4": "Devi scegliere 1, 2, 3 o 4",
+        "result": "Il risultato è:",
+        "another": "Vuoi eseguire un'altra operazione? 1) Sì 2) No",
+        "chose1to2": "Devi scegliere 1 o 2"
+    }
 }

@@ -11,32 +11,56 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
+prompt("Select language: 1) English 2) Spanish 3) French or 4) Italian")
+let languageSelection = readline.question();
 
-prompt(message.welcome);
+while (!['1', '2', '3', '4'].includes(languageSelection)) {
+    prompt(message.english.chose1to4);
+    languageSelection = readline.question();
+  }
+
+let language;
+  switch (languageSelection) {
+    case '1':
+      language = "english";
+      break;
+    case '2':
+      language = "spanish";
+      break;
+    case '3':
+      language = "french";
+      break;
+    case '4':
+      language = "italian";
+      break;
+  }
+
+
+prompt(message[language].welcome);
 
 do {
 
-  prompt(message.first_number);
+  prompt(message[language].first_number);
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt(message.not_a_number);
+    prompt(message[language].not_a_number);
     number1 = readline.question();
   }
 
-  prompt(message.second_number);
+  prompt(message[language].second_number);
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt(message.not_a_number);
+    prompt(message[language].not_a_number);
     number2 = readline.question();
   }
 
-  prompt(message.operation);
+  prompt(message[language].operation);
   let operation = readline.question();
 
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt(message.chose1to4);
+    prompt(message[language].chose1to4);
     operation = readline.question();
   }
 
@@ -56,13 +80,13 @@ do {
       break;
   }
 
-  prompt(`${message.result} ${output}`);
+  prompt(`${message[language].result} ${output}`);
 
-  prompt(message.another)
+  prompt(message[language].another)
   let answerToRepeat = readline.question();
 
   while (!['1', '2'].includes(answerToRepeat)) {
-    prompt(message.chose1to2);
+    prompt(message[language].chose1to2);
     answerToRepeat = readline.question();
   }
 

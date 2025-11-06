@@ -1,0 +1,60 @@
+const readline = require('readline-sync');
+
+// ask for the input of three variables
+// calculate
+// show answer
+// EXTRA: Try every edgecase you can imagine. Write them down
+
+// INPUT THE VARIABLES
+
+const YEAR_MONTHS = 12;
+
+console.log("Welcome to the mortgage calculator!")
+
+function validation (loanMessage) {
+    let loanVariable = readline.question();
+    while (Number.isNaN(Number(loanVariable.trim())) || loanVariable < 0) {
+        console.log(`=> ${loanMessage}`);
+        loanVariable = readline.question();
+    }
+    return loanVariable;
+
+}
+
+console.log("Please enter the loan amount: ");
+let loanAmount = validation("Please enter a valid amount: ");
+
+console.log("Enter the annual percentage rate (as %): ");
+let annualPercentageRate = validation("Please enter a valid percentage: ");
+
+console.log("Enter the loan duration in years: ");
+let loanDurationYears = validation("Please enter a valid number: ")
+
+//CALCULATION
+
+let monthlyPercentageRate = annualPercentageRate/YEAR_MONTHS/100;
+
+let loanDurationMonths = loanDurationYears*YEAR_MONTHS;
+
+let monthlyPayment;
+
+if (annualPercentageRate > 0) {
+    monthlyPayment = loanAmount * (monthlyPercentageRate / (1 - Math.pow((1 + monthlyPercentageRate), (-loanDurationMonths))));
+} else {
+    monthlyPayment = loanAmount/loanDurationMonths;
+}
+
+
+// SHOW ANSWER
+
+console.log(`Loan Details- Amount: $${loanAmount}. Duration: ${loanDurationMonths} months. Annual Interest Rate: ${annualPercentageRate}%.`);  
+    
+ console.log(`Monthly payment: $${monthlyPayment.toFixed(2)}`);
+
+
+// AREAS OF IMPROVEMENT
+// Add a welcome message -> to show more polished material
+// Input validation -> is none
+// Case of 0% interest rate -> realistic
+// Cases where there are spaces
+// Summary display of the loan
